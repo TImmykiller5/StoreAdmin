@@ -64,7 +64,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
         // ts ignore
         initialData && setColors(initialData.color.map(col => col ))
         initialData && SetSizes(initialData.size.map(siz => siz ))
-    }, [])
+    }, [initialData])
     
     const handleSelectChange = (value: Color) => {
       if (!Colors.filter((color) => color.id === value.id).length) {
